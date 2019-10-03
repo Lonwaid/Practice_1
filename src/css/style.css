@@ -134,13 +134,17 @@ img {
   .hero-list {
     margin-bottom: 44px; }
   .hero-text {
-    padding-right: 10px; } }
+    padding-right: 10px; }
+    .hero-text__title {
+      font-size: 32px; } }
 
 @media (max-width: 992px) {
   .hero-block {
     flex-direction: column;
     justify-content: space-between;
-    padding-right: 0; } }
+    padding-right: 0; }
+  .hero-image_sizes {
+    margin: auto; } }
 
 @media (max-width: 768px) {
   .hero-text__title {
@@ -149,17 +153,13 @@ img {
     margin-bottom: 15px; }
   .hero-text__subtitle {
     font-size: 16px;
-    margin-bottom: 50px; }
+    margin-bottom: 40px; }
   .hero-list__item {
     margin-bottom: 20px; }
   .hero-list__text {
     font-size: 12px; }
   .hero-list__image {
     margin-right: 15px; } }
-
-@media (max-width: 768px) {
-  .hero-text__subtitle {
-    margin-bottom: 40px; } }
 
 @media (max-width: 420px) {
   .hero {
