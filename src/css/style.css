@@ -12,6 +12,9 @@
   font-weight: normal;
   font-style: normal; }
 
+* {
+  box-sizing: border-box; }
+
 body {
   font-family: 'Museo Sans Light';
   font-weight: 300; }
@@ -55,6 +58,15 @@ img {
   font-size: 13px;
   font-family: 'Museo Sans Bold';
   font-weight: 700; }
+  .button:hover {
+    background-color: #ffdb33;
+    cursor: pointer;
+    transition-duration: 500ms; }
+
+.section {
+  padding: 90px 0; }
+  .section-title {
+    font-size: 24px; }
 
 .navbar {
   padding: 6px 0 4px 0; }
@@ -136,6 +148,8 @@ img {
       display: flex;
       align-items: center;
       margin-bottom: 26px; }
+      .hero-list__item:last-child {
+        margin-bottom: 0; }
       .hero-list__item_item1 {
         margin-top: -1px; }
       .hero-list__item_item2 {
@@ -208,3 +222,7 @@ img {
     .hero-image_sizes {
       max-width: 270px;
       margin-left: 3px; } }
+
+.offer-block {
+  width: 50%;
+  padding-right: 90px; }

@@ -1,6 +1,6 @@
 .hero
 	padding: 50px 0 48px 0
-	background-color: #f5f5f5
+	background-color: $secondary
 	&-image
 		&__image
 			box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.05), 16px 22px 35px rgba(0, 0, 0, 0.05)
@@ -28,6 +28,8 @@
 			display: flex
 			align-items: center
 			margin-bottom: 26px
+			&:last-child
+				margin-bottom: 0
 			&_item1
 				margin-top: -1px
 			&_item2
