@@ -436,3 +436,27 @@ img {
     font-size: 16px;
     margin: 15px 0 29px 4px;
     padding: 18px 30px	17px 32px; }
+
+@media (max-width: 768px) {
+  .modal-dialog__title {
+    font-size: 20px; }
+  .modal-dialog__phone {
+    font-size: 20px; }
+  .modal__button {
+    width: 372px; } }
+
+@media (max-width: 567px) {
+  .modal__button {
+    width: 100%; }
+  .modal__input {
+    width: 100%; }
+  .modal-dialog__title {
+    padding: 0 12px 7px 12px; }
+  .modal-dialog__text {
+    width: 85%; } }
+
+@media (max-width: 567px) {
+  .modal-dialog__title {
+    font-size: 18px; }
+  .modal-dialog__phone {
+    font-size: 18px; } }
