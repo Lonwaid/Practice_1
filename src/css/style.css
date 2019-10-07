@@ -83,6 +83,10 @@ img {
   padding: 23px 26px;
   font-size: 15px;
   color: #999999; }
+  .input:focus {
+    border: 1px solid #ffd200;
+    border-radius: 10px;
+    outline: none; }
 
 .navbar {
   padding: 6px 0 4px 0; }
