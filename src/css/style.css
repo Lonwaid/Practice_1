@@ -416,7 +416,9 @@ img {
 
 @media (max-width: 992px) {
   .slider__item {
-    padding: 0 20px; } }
+    padding: 0 20px; }
+  .portfolio__title {
+    font-size: 26px; } }
 
 @media (max-width: 768px) {
   .slider__item {
@@ -426,7 +428,7 @@ img {
 
 @media (max-width: 567px) {
   .portfolio__title {
-    font-size: 24px; } }
+    font-size: 22px; } }
 
 @media (max-width: 420px) {
   .slider__item {
@@ -520,6 +522,42 @@ img {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; }
+
+@media (max-width: 1200px) {
+  .cards {
+    justify-content: space-evenly; } }
+
+@media (max-width: 992px) {
+  .price__title {
+    font-size: 26px; } }
+
+@media (max-width: 567px) {
+  .price__title {
+    font-size: 22px; }
+  .price__subtitle {
+    font-size: 18px; } }
+
+@media (max-width: 420px) {
+  .price__title {
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 285px;
+    margin-top: -8px;
+    margin-bottom: 25px;
+    margin-right: 13px; }
+  .price__subtitle {
+    font-size: 14px;
+    margin-right: 28px; }
+  .price__card {
+    width: 94%;
+    margin-right: 14px; }
+  .card__title {
+    font-size: 14px;
+    margin-bottom: 12px; }
+  .card__text {
+    padding: 33px 33px 27px 33px; }
+  .card__link {
+    margin-right: 3px; } }
 
 .modal {
   position: fixed;
