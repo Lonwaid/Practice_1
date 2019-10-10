@@ -6,6 +6,7 @@
 	<title>Ремонт квартир</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/animate.css">
 	<!-- <link rel="stylesheet" href="css/owl.carousel.min.css"> -->
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -50,7 +51,7 @@
 
 				<div class="hero-block">
 
-					<div class="hero-text">
+					<div class="hero-text wow fadeInLeft">
 						
 						<h1 class="hero-text__title">
 							
@@ -102,7 +103,7 @@
 
 					</div>
 					<!-- /.hero-text -->
-					<div class="hero-image hero-image_sizes">
+					<div class="hero-image hero-image_sizes wow fadeInRight">
 						
 						<img class="hero-image__image"src="img/hero/hero_image.png" alt="План квартиры">
 
@@ -137,11 +138,11 @@
 
 					<form action="#" class="form offer__form">
 						
-						<input type="text" class="input offer__input" placeholder="Ваше имя">
+						<input type="text" class="input offer__input wow zoomIn" placeholder="Ваше имя">
 
-						<input type="tel" class="input offer__input input offer__input_sizes" placeholder="Ваш телефон">
+						<input type="tel" class="input offer__input input offer__input_sizes wow zoomIn" placeholder="Ваш телефон">
 
-						<button class="button offer__button">
+						<button class="button offer__button wow zoomIn">
 							Получить бесплатный дизайн-проект
 						</button>
 
@@ -212,7 +213,7 @@
 
 				<div class="cards">
 
-					<div class="card price__card">
+					<div class="card price__card wow fadeInUp" data-wow-delay="0.1s">
 
 						<div class="card__image"><img src="img/price/bathroom.jpg" alt=""></div>
 						<!-- /.card__image -->
@@ -225,7 +226,7 @@
 						<!-- /.card__text -->
 					</div>
 					<!-- /.card -->
-					<div class="card price__card">
+					<div class="card price__card wow fadeInUp" data-wow-delay="0.2s">
 
 						<div class="card__image"><img src="img/price/living.jpg" alt=""></div>
 						<!-- /.card__image -->
@@ -238,7 +239,7 @@
 						<!-- /.card__text -->
 					</div>
 					<!-- /.card -->
-					<div class="card price__card">
+					<div class="card price__card wow fadeInUp" data-wow-delay="0.3s">
 
 						<div class="card__image"><img src="img/price/office.jpg" alt=""></div>
 						<!-- /.card__image -->
@@ -251,7 +252,7 @@
 						<!-- /.card__text -->
 					</div>
 					<!-- /.card -->
-					<div class="card price__card">
+					<div class="card price__card wow fadeInUp" data-wow-delay="0.4s">
 
 						<div class="card__image"><img src="img/price/buildings.jpg" alt=""></div>
 						<!-- /.card__image -->
@@ -264,7 +265,7 @@
 						<!-- /.card__text -->
 					</div>
 					<!-- /.card -->
-					<div class="card price__card">
+					<div class="card price__card wow fadeInUp" data-wow-delay="0.5s">
 
 						<div class="card__image"><img src="img/price/kitchen.jpg" alt=""></div>
 						<!-- /.card__image -->
@@ -277,7 +278,7 @@
 						<!-- /.card__text -->
 					</div>
 					<!-- /.card -->
-					<div class="card price__card">
+					<div class="card price__card wow fadeInUp" data-wow-delay="0.6s">
 
 						<div class="card__image"><img src="img/price/village.jpg" alt=""></div>
 						<!-- /.card__image -->
@@ -337,7 +338,9 @@
   <script src="js/modal.js"></script>
   <!-- <script src="js/owl.carousel.min.js"></script> -->
   <script src="js/slick.min.js"></script>
+  <script src="js/wow.min.js"></script>
   <script>
+  	new WOW().init();
   	$(document).ready(function() {
   		$('.slider').slick({
   			slidesToShow: 3,
