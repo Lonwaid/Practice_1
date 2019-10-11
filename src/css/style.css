@@ -669,6 +669,47 @@ img {
       font-size: 12px;
       line-height: 16px; } }
 
+.advantages__title {
+  max-width: 915px;
+  margin: auto;
+  text-align: center;
+  margin-top: 100px;
+  font-family: 'Museo Sans Light';
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 50px; }
+
+.title-wrapper {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  min-height: 280px;
+  background-color: #ffc100; }
+
+.tab {
+  min-height: 410px;
+  flex-basis: 19.7%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .tabs {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-around; }
+  .tab__text {
+    max-width: 290px; }
+  .tab-wrapper {
+    background: url("../img/advantages/tab-bg.png"); }
+
 .modal {
   position: fixed;
   left: 0;
