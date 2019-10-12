@@ -1,0 +1,84 @@
+.warranty
+	padding: 43px 0 90px
+	&__title
+		font-size: 30px
+		line-height: 45px
+		max-width: 645px
+		margin: auto
+		margin-bottom: 93px
+		text-align: center
+	&__block
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+	&__item
+		flex-basis: 28%
+		text-align: center
+		&_1
+			margin-left: 20px
+		&_2
+			// margin-right: 36px
+		&_3
+			margin-right: 22px
+	&__text
+		font-size: 18px
+		line-height: 24px
+		margin: 33px 0
+	&__link
+		display: inline-block
+		width: 270px
+		height: 360px
+		border: 20px solid #f5f5f5
+		&_1
+			background-image: url('../img/warranty/document-1.png')
+		&_2
+			background-image: url('../img/warranty/document-2.png')
+		&_3	
+			background-image: url('../img/warranty/document-3.png')
+@media (max-width: 1200px)
+	.warranty
+		&__text
+			font-size: 17px
+		&__item
+			&_2
+				// margin-right: 24px
+@media (max-width: 992px)	
+	.warranty
+		&__title
+			font-size: 26px
+		&__block
+			flex-direction: column
+			align-items: center
+		&__item
+			margin: 0
+			max-width: 290px
+@media (max-width: 567px)	
+	.warranty
+		padding: 45px 0 
+		&__title
+			font-size: 21px
+			line-height: 34px
+			margin-bottom: 60px
+		&__text
+			font-size: 16px
+@media (max-width: 420px)	
+	.warranty
+		&__title
+			font-size: 18px
+			line-height: 22px
+			margin-right: 9px
+			margin-bottom: 48px	
+		&__text
+			font-size: 14px	
+			line-height: 18px
+			margin-top: 24px
+			&_1, &_2
+				margin-bottom: 42px
+			&_2, &_3
+				max-width: 250px
+				margin-left: 9px
+		&__item
+			margin-right: 10px					
