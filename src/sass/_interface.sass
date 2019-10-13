@@ -60,10 +60,25 @@ img
 		border: 1px solid $main-color
 		border-radius: 10px
 		outline: none
+.input-group
+	position: relative
+	&__inline
+		display: inline-block
+@media (max-width: 1200px)
+	.input-group
+		&__inline
+			display: block
 .arrows
 	&__left, &__right
 		&:hover
 			cursor: pointer
+.error
+	border: 1px solid red
+label.error
+	position: absolute
+	bottom: 2%
+	left: 0
+	border: none
 	
 				
 
