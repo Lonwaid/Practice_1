@@ -95,7 +95,10 @@ img {
 
 @media (max-width: 1200px) {
   .input-group__inline {
-    display: block; } }
+    display: block; }
+  .input-group__brif {
+    max-width: 370px;
+    margin: auto; } }
 
 .arrows__left:hover, .arrows__right:hover {
   cursor: pointer; }
@@ -105,9 +108,17 @@ img {
 
 label.error {
   position: absolute;
-  bottom: 2%;
+  bottom: 0;
   left: 0;
   border: none; }
+
+@media (max-width: 1200px) {
+  label.error {
+    font-size: 13px; } }
+
+@media (max-width: 1200px) {
+  label.error {
+    font-size: 11px; } }
 
 .navbar {
   padding: 6px 0 4px 0; }
@@ -1154,6 +1165,11 @@ strong {
     font-size: 16px;
     margin: 15px 0 29px 4px;
     padding: 18px 30px	17px 32px; }
+
+.input-group__modal {
+  position: relative;
+  max-width: 375px;
+  margin: auto; }
 
 @media (max-width: 768px) {
   .modal-dialog__title {

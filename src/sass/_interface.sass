@@ -68,6 +68,9 @@ img
 	.input-group
 		&__inline
 			display: block
+		&__brif
+			max-width: 370px
+			margin: auto
 .arrows
 	&__left, &__right
 		&:hover
@@ -76,10 +79,15 @@ img
 	border: 1px solid red
 label.error
 	position: absolute
-	bottom: 2%
+	bottom: 0
 	left: 0
 	border: none
-	
+@media (max-width: 1200px)
+	label.error
+		font-size: 13px
+@media (max-width: 1200px)
+	label.error
+		font-size: 11px
 				
 
 		

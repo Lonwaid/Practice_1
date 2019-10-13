@@ -136,7 +136,7 @@
 	
 					</span>
 
-					<form action="#" class="form offer__form form-validation">
+					<form action="#" class="form offer__form" id="offer-form">
 						
 						<div class="input-group input-group__inline">
 
@@ -572,21 +572,21 @@
 						<span class="form__subtitle">
 							Для этого заполните форму ниже</span>
 
-							<form action="#" class="form-validation">
+							<form action="#" id="brif-form">
 								
-								<div class="input-group">
+								<div class="input-group input-group__brif">
 									
 									<input type="text" name="username" class="input brif__input" placeholder="Ваше имя">
 
 								</div>
 
-								<div class="input-group">
+								<div class="input-group input-group__brif">
 									
 									<input type="tel" name="phone" class="input brif__input phone" placeholder="Ваш телефон">
 
 								</div>
 
-								<div class="input-group">
+								<div class="input-group input-group__brif">
 									
 									<input type="email" name="email" class="input brif__input" placeholder="Ваш email">
 
@@ -620,11 +620,19 @@
 			</h4>
 			<span class="modal-dialog__subtitle">
 				Заполните поля ниже - мы свяжемся с&nbsp;Вами</span>
-			<form action="#" class="form offer__form">
+			<form action="#" class="form offer__form" id="modal-form">
 						
-						<input type="text" class="input modal__input" placeholder="Ваше имя">
+						<div class="input-group__modal">
+							
+							<input type="text" name="username" class="input modal__input" placeholder="Ваше имя">
 
-						<input type="tel" class="input modal__input" placeholder="Ваш телефон">
+						</div>
+
+						<div class="input-group__modal">
+							
+							<input type="tel" name="phone" class="input modal__input phone" placeholder="Ваш телефон">
+
+						</div>
 
 						<button class="button modal__button">
 							Узнать стоимость
@@ -655,7 +663,63 @@
   	new WOW().init();
   	$(document).ready(function() {
   		// Валидация форм
-  		$('.form-validation').validate({
+  		$('#brif-form').validate({
+  			rules: {
+  				username: {
+  					required: true,
+  					minlength: 2,
+  					maxlength: 15,
+  				},
+  				email: {
+  					required: true,
+  					email: true,
+  				},
+  				phone: {
+  					required: true,
+  				},
+  			},
+  			messages: {
+  				username: {
+  					required: "Укажите имя",
+  					minlength: jQuery.validator.format("Осталось {0} буквы"),
+  					maxlength: jQuery.validator.format("Не длинее 15-ти букв"),
+  				}, 
+  				phone: {
+						required: "Введите номер телефона",
+  				},
+  				
+  				email: "Введите email"
+  			},
+  		});
+  		$('#offer-form').validate({
+  			rules: {
+  				username: {
+  					required: true,
+  					minlength: 2,
+  					maxlength: 15,
+  				},
+  				email: {
+  					required: true,
+  					email: true,
+  				},
+  				phone: {
+  					required: true,
+  				},
+  			},
+  			messages: {
+  				username: {
+  					required: "Укажите имя",
+  					minlength: jQuery.validator.format("Осталось {0} буквы"),
+  					maxlength: jQuery.validator.format("Не длинее 15-ти букв"),
+  				}, 
+  				phone: {
+						required: "Введите номер телефона",
+  				},
+  				
+  				email: "Введите email"
+  			},
+  		});
+  		$('#modal-form').validate({
   			rules: {
   				username: {
   					required: true,
