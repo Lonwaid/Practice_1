@@ -1008,6 +1008,11 @@ strong {
     margin-bottom: 30px; } }
 
 @media (max-width: 992px) {
+  .brif {
+    background-image: url("../img/brif/brif_bg_color.jpg"), url("../img/brif/brif_bg.jpg");
+    background-position: left center, center right;
+    background-size: 50%, cover;
+    background-repeat: repeat-y, no-repeat; }
   .interview__title {
     max-width: 330px;
     font-size: 18px;
@@ -1044,7 +1049,7 @@ strong {
     padding: 24px 0 50px;
     background-image: url("../img/brif/brif_bg_color.jpg"), url("../img/brif/brif_bg.jpg");
     background-position: top center, center bottom;
-    background-size: 100% 49.4%, cover;
+    background-size: 100% 46.1%, cover;
     background-repeat: repeat-x, no-repeat; }
     .brif__form {
       flex-basis: 100%;
