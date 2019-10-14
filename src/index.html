@@ -609,6 +609,80 @@
 
 	</main>
 
+	<footer class="footer">
+
+		<div class="map" id="map">
+			
+			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae8566515bab5baa33009152692c3122625879a333b551a1c6bdbff4df7e8992a&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false"></script>
+
+		</div>
+		<!-- /#map.map -->
+		<div class="container">
+
+			<div class="contacts-block">
+
+				<div class="contacts">
+					
+					<h3 class="contacts__title">
+
+						Приезжайте к нам в гости! Проконсультируем Вас по&nbsp;всем вопросам ремонта</h3>	
+
+					<ul class="contacts-list contacts-list__footer">
+
+							<li class="contacts-list__item">
+
+								<span class="contacts-list__icon">
+									
+									<img src="img/footer/icon_map-placeholder.png" alt="placeholder">
+								</span>
+
+								<span class="contacts-list__text">
+									
+									г. Москва<br> <b>ул. Ленинга, д. 10, корпус 2, оф. 308</b>
+
+								</span>
+							</li>
+							<!-- /.contacts-list__item -->
+							<li class="contacts-list__item">
+
+								<span class="contacts-list__icon">
+									
+									<img src="img/footer/icon_clock.png" alt="clock">
+								</span>
+								<span class="contacts-list__text">
+									
+									Режим работы:<br> <b>с 9:00 до 18:00</b>
+
+								</span>
+							</li>
+							<!-- /.contacts-list__item -->
+							<li class="contacts-list__item">
+
+								<span class="contacts-list__icon">
+									
+									<img src="img/footer/icon_phone-call-button.png" alt="call-button">
+
+								</span>
+
+								<span class="contacts-list__text">
+									
+									Телефон:<br>
+									 <a href="tel:+7(495)42-251-31"><b>+ 7 (495) 42-251-31</b></a>
+								</span>
+							</li>
+							<!-- /.contacts-list__item -->
+						</ul>
+						<!-- /.contacts-list -->	
+
+				</div>
+				<!-- /.contacts -->
+			</div>
+			<!-- /.contacts-block -->
+		</div>
+		<!-- /.container -->
+	</footer>
+	<!-- /.footer section -->
+
 	<div class="modal" id="modal">
 
 		<div class="modal-dialog">
@@ -693,6 +767,8 @@
   					email: "Введите действующий email",
   				},
   			},
+  			errorClass: "invalid",
+  			errorElement: "div",
   		});
   		$('#offer-form').validate({
   			rules: {
@@ -724,6 +800,8 @@
   					email: "Введите действующий email",
   				},
   			},
+  			errorClass: "invalid",
+  			errorElement: "div",
   		});
   		$('#modal-form').validate({
   			rules: {
@@ -755,6 +833,8 @@
   					email: "Введите действующий email",
   				},
   			},
+  			errorClass: "invalid",
+  			errorElement: "div",
   		});
   		// Маска для телефона
   		$('.phone').mask('+7 (999) 999-99-99');

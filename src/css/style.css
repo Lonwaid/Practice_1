@@ -103,21 +103,21 @@ img {
 .arrows__left:hover, .arrows__right:hover {
   cursor: pointer; }
 
-.error {
+.invalid {
   border: 1px solid red; }
 
-label.error {
+div.invalid {
   position: absolute;
   bottom: 0;
   left: 0;
   border: none; }
 
 @media (max-width: 1200px) {
-  label.error {
+  div.invalid {
     font-size: 13px; } }
 
 @media (max-width: 1200px) {
-  label.error {
+  div.invalid {
     font-size: 11px; } }
 
 .navbar {
@@ -844,8 +844,10 @@ strong {
       background-image: url("../img/warranty/document-3.png"); }
 
 @media (max-width: 1200px) {
-  .warranty__text {
-    font-size: 17px; } }
+  .warranty {
+    padding: 43px 0 80px; }
+    .warranty__text {
+      font-size: 17px; } }
 
 @media (max-width: 992px) {
   .warranty__title {
@@ -888,7 +890,7 @@ strong {
       margin-right: 10px; } }
 
 .brif {
-  padding: 76px 0 74px;
+  padding: 76px 0 14px;
   background-image: url("../img/brif/brif_bg_color.jpg"), url("../img/brif/brif_bg.jpg");
   background-position: left center, center right;
   background-size: 50%, contain;
@@ -1046,7 +1048,7 @@ strong {
 
 @media (max-width: 420px) {
   .brif {
-    padding: 24px 0 50px;
+    padding: 24px 0 0;
     background-image: url("../img/brif/brif_bg_color.jpg"), url("../img/brif/brif_bg.jpg");
     background-position: top center, center bottom;
     background-size: 100% 46.1%, cover;
@@ -1108,6 +1110,121 @@ strong {
     font-size: 14px;
     line-height: 24px;
     padding-right: 17px; } }
+
+.footer {
+  position: relative; }
+
+.map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%; }
+
+.contacts {
+  flex-basis: 50%;
+  padding-top: 69px;
+  padding-left: 213px; }
+  .contacts__title {
+    font-family: 'Museo Sans Bold';
+    font-weight: 700;
+    max-width: 330px;
+    font-size: 22px;
+    line-height: 33px;
+    margin-bottom: 95px; }
+  .contacts-block {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: flex-end; }
+  .contacts-list {
+    padding: 0;
+    list-style: none; }
+    .contacts-list__icon {
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      margin-right: 23px; }
+    .contacts-list__item {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 35px; }
+    .contacts-list__text {
+      max-width: 180px;
+      font-size: 16px;
+      line-height: 26px;
+      margin-top: -6px; }
+      .contacts-list__text b {
+        font-family: 'Museo Sans Bold';
+        font-weight: 700; }
+      .contacts-list__text a {
+        text-decoration: none;
+        color: #000000; }
+    .contacts-list__footer {
+      margin-left: -2px; }
+
+@media (max-width: 1200px) {
+  .contacts {
+    padding-top: 60px;
+    padding-left: 70px; }
+    .contacts__title {
+      font-size: 20px; } }
+
+@media (max-width: 992px) {
+  .contacts__title {
+    font-size: 18px;
+    line-height: 26px; }
+  .contacts-list__text {
+    font-size: 15px; } }
+
+@media (max-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: column-reverse; }
+  .map {
+    position: static;
+    width: 100%; }
+  .contacts {
+    padding-left: 0;
+    flex-basis: 100%; }
+    .contacts__title {
+      font-size: 18px;
+      text-align: center;
+      max-width: 100%;
+      margin-bottom: 70px; }
+    .contacts-list {
+      display: flex;
+      justify-content: space-between; }
+      .contacts-list__item {
+        flex-basis: 32%; }
+      .contacts-list__icon {
+        margin-right: 12px; } }
+
+@media (max-width: 567px) {
+  .contacts__title {
+    margin-bottom: 55px; }
+  .contacts-list {
+    display: block;
+    padding-left: 48px; } }
+
+@media (max-width: 420px) {
+  .contacts {
+    padding: 1px 0 22px 4px; }
+    .contacts__title {
+      text-align: left;
+      line-height: 22px;
+      max-width: 250px;
+      margin-bottom: 37px; }
+    .contacts-list {
+      padding-left: 0; }
+      .contacts-list__text {
+        font-size: 16px; } }
 
 .modal {
   position: fixed;
