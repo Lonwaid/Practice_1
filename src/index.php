@@ -136,7 +136,7 @@
 	
 					</span>
 
-					<form action="#" class="form offer__form" id="offer-form">
+					<form action="mail.php" method="POST" class="form offer__form" id="offer-form">
 						
 						<div class="input-group input-group__inline">
 
