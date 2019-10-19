@@ -323,6 +323,7 @@ template {
   box-sizing: border-box; }
 
 body {
+  color: #333333;
   font-family: 'Museo Sans Light';
   font-weight: 300; }
 
@@ -362,7 +363,7 @@ img {
   background-color: #ffd200;
   color: #333333;
   border: none;
-  padding: 18px 30px 17px 29px;
+  padding: 15px 30px 15px 29px;
   font-size: 13px;
   font-family: 'Museo Sans Bold';
   font-weight: 700; }
@@ -418,15 +419,17 @@ div.invalid {
   position: absolute;
   bottom: 0;
   left: 0;
-  border: none; }
-
-@media (max-width: 1200px) {
-  div.invalid {
-    font-size: 13px; } }
+  border: none;
+  color: red;
+  font-size: 14px; }
 
 @media (max-width: 1200px) {
   div.invalid {
     font-size: 11px; } }
+
+@media (max-width: 420px) {
+  div.invalid {
+    font-size: 9px; } }
 
 @media (max-width: 992px) {
   .button:hover {
@@ -616,6 +619,7 @@ div.invalid {
     font-weight: 700;
     font-size: 13px; }
   .navbar__button {
+    padding: 18px 30px 17px 29px;
     margin-left: 30px;
     margin-top: -4px; }
   .navbar__phone {
@@ -711,7 +715,12 @@ div.invalid {
     justify-content: space-between;
     padding-right: 0; }
   .hero-image_sizes {
-    margin: auto; } }
+    margin: auto; }
+  .hero-list_margin {
+    margin-left: 200px; }
+  .hero-text__subtitle {
+    display: block;
+    text-align: center; } }
 
 @media (max-width: 768px) {
   .hero-text__title {
@@ -726,7 +735,16 @@ div.invalid {
   .hero-list__text {
     font-size: 12px; }
   .hero-list__image {
-    margin-right: 15px; } }
+    margin-right: 15px; }
+  .hero-list_margin {
+    margin-left: 130px; } }
+
+@media (max-width: 567px) {
+  .hero-text__subtitle {
+    display: inline-block;
+    text-align: left; }
+  .hero-list_margin {
+    margin-left: 0; } }
 
 @media (max-width: 420px) {
   .hero {
@@ -788,8 +806,8 @@ div.invalid {
     .offer__input_sizes {
       padding: 23px 31px; }
   .offer__button {
-    width: 99%;
-    min-height: 70px;
+    width: 100%;
+    min-height: 65px;
     margin-bottom: 25px;
     font-size: 16px; }
   .offer-info {
@@ -927,17 +945,22 @@ div.invalid {
   .slider__item {
     padding: 0 20px; }
   .portfolio__title {
-    font-size: 26px; } }
+    font-size: 26px;
+    margin-top: 15px;
+    margin-bottom: 80px; } }
 
 @media (max-width: 768px) {
   .slider__item {
     padding: 0 10px; }
   .portfolio__title {
-    font-size: 26px; } }
+    font-size: 24px;
+    line-height: 40px; } }
 
-@media (max-width: px) {
+@media (max-width: 567px) {
   .portfolio__title {
-    font-size: 22px; } }
+    margin-bottom: 60px;
+    font-size: 20px;
+    line-height: 35px; } }
 
 @media (max-width: 420px) {
   .slider__item {
@@ -1401,7 +1424,7 @@ strong {
     max-width: 370px;
     margin-bottom: 15px; }
   .brif__button {
-    height: 70px;
+    height: 65px;
     width: 100%;
     max-width: 370px;
     margin-top: 15px;
@@ -1478,7 +1501,7 @@ strong {
 
 @media (max-width: 1200px) {
   .brif__form {
-    padding-left: 30px; }
+    padding-left: 35px; }
   .interview {
     padding-right: 30px; }
     .interview__title {
@@ -1504,19 +1527,23 @@ strong {
     background-position: left center, center right;
     background-size: 50%, cover;
     background-repeat: repeat-y, no-repeat; }
-  .interview__title {
-    max-width: 330px;
-    font-size: 18px;
-    line-height: 25px; }
-  .interview-list__text {
-    max-width: 290px;
-    font-size: 16px; }
-    .interview-list__text_3 {
-      margin-top: 4px; }
-  .interview-list__counter {
-    margin-right: 17px; }
-  .interview-list__item_3 {
-    margin-bottom: 23px; }
+    .brif__form {
+      padding-left: 70px; }
+  .interview {
+    padding-right: 50px; }
+    .interview__title {
+      max-width: 330px;
+      font-size: 18px;
+      line-height: 25px; }
+    .interview-list__text {
+      max-width: 290px;
+      font-size: 16px; }
+      .interview-list__text_3 {
+        margin-top: 4px; }
+    .interview-list__counter {
+      margin-right: 17px; }
+    .interview-list__item_3 {
+      margin-bottom: 23px; }
   .form__title {
     font-size: 18px;
     margin: 18px 0 15px 4px;
@@ -1527,7 +1554,7 @@ strong {
     padding: 50px 0 50px;
     background-image: url("../img/brif/brif_bg_color.jpg"), url("../img/brif/brif_bg.jpg");
     background-position: top center, center bottom;
-    background-size: 100% 50%, cover;
+    background-size: 100% 46%, cover;
     background-repeat: repeat-x, no-repeat; }
     .brif-block {
       flex-direction: column; }
@@ -1537,7 +1564,7 @@ strong {
 
 @media (max-width: 420px) {
   .brif {
-    padding: 24px 0 0;
+    padding: 24px 0;
     background-image: url("../img/brif/brif_bg_color.jpg"), url("../img/brif/brif_bg.jpg");
     background-position: top center, center bottom;
     background-size: 100% 46.1%, cover;
@@ -1602,6 +1629,8 @@ strong {
 
 .footer {
   position: relative; }
+  .footer__tel-link {
+    color: #333333; }
 
 .map {
   position: absolute;
@@ -1709,6 +1738,7 @@ strong {
       text-align: left;
       line-height: 22px;
       max-width: 250px;
+      margin-top: 40px;
       margin-bottom: 37px; }
     .contacts-list {
       padding-left: 0; }
@@ -1772,11 +1802,12 @@ strong {
     margin-left: -2px;
     margin-bottom: 15px; }
   .modal__button {
-    width: 75%;
-    min-height: 70px;
+    width: 100%;
+    max-width: 375px;
+    min-height: 65px;
     font-size: 16px;
-    margin: 15px 0 29px 4px;
-    padding: 18px 30px	17px 32px; }
+    margin: 15px 0 29px;
+    padding: 15px 32px; }
 
 .input-group__modal {
   position: relative;
@@ -1797,12 +1828,41 @@ strong {
   .modal__input {
     width: 100%; }
   .modal-dialog__title {
-    padding: 0 12px 7px 12px; }
+    padding: 0 12px 7px 12px;
+    line-height: 26px; }
+  .modal-dialog__subtitle {
+    line-height: 24px; }
   .modal-dialog__text {
     width: 85%; } }
 
 @media (max-width: 567px) {
-  .modal-dialog__title {
-    font-size: 18px; }
-  .modal-dialog__phone {
-    font-size: 18px; } }
+  .modal-dialog {
+    padding: 30px 30px; }
+    .modal-dialog__title {
+      font-size: 18px; }
+    .modal-dialog__phone {
+      font-size: 18px; } }
+
+@media (max-width: 420px) {
+  .offer__form_mod {
+    max-width: 100%; } }
+
+@media (max-width: 380px) {
+  .modal__input {
+    font-size: 13px; }
+  .modal__button {
+    font-size: 15px; }
+  .modal-dialog {
+    padding: 25px 25px; }
+    .modal-dialog__title {
+      line-height: 22px;
+      font-size: 16px;
+      margin-bottom: 0; }
+    .modal-dialog__phone {
+      font-size: 13px; }
+    .modal-dialog__subtitle {
+      font-size: 11px;
+      margin-bottom: 14px;
+      margin-left: 0; }
+    .modal-dialog__text {
+      font-size: 12px; } }

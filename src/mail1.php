@@ -15,11 +15,11 @@ try {
     $mail->SMTPAuth   = true;
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера GMAIL
-    $mail->Username   = 'peter2019ivankov@gmail.com'; // Логин на почте
-    $mail->Password   = 'SqBTSloI'; // Пароль на почте
+    $mail->Username   = 'erevanovarmen@gmail.com'; // Логин на почте
+    $mail->Password   = '86yVL1Ux'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('peter2019ivankov@gmail.com', 'Андрей'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('erevanovarmen@gmail.com', 'Андрей'); // Адрес самой почты и имя отправителя
     // Получатель письма
     $mail->addAddress('Andrey9053@yandex.ru');  
     

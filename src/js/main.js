@@ -1,3 +1,4 @@
+$(document).ready(function() {
 var button = document.querySelector('#button');
 var modalForm = document.querySelector('#modal-form');
 var modalThanks = document.querySelector('#modal-thanks');
@@ -22,7 +23,7 @@ closeThanks.addEventListener('click', function() {
 // };
 
 new WOW().init();
-$(document).ready(function() {
+
 	// Валидация форм
 	$('#brif-form').validate({
 		rules: {
@@ -126,14 +127,13 @@ $(document).ready(function() {
 	// Маска для телефона
 	$('.phone').mask('+7 (999) 999-99-99');
 
-	var reviews = $('.warranty');
+	var reviews = $('.advantages');
 	var reviewsTop = reviews.offset().top;
 	$(window).bind('scroll', function () {
 		var windowTop = $(this).scrollTop();
 		if (windowTop > reviewsTop) {
-			$('#map').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae8566515bab5baa33009152692c3122625879a333b551a1c6bdbff4df7e8992a&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false"></script>')
-			console.log('Докрутили');
-			$(window).unbind('scroll')
+			$('#map').html('<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae8566515bab5baa33009152692c3122625879a333b551a1c6bdbff4df7e8992a&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false"></script>');
+			$(window).unbind('scroll');
 		}
 	});
 
@@ -143,7 +143,7 @@ $(document).ready(function() {
 		const offerName = document.getElementById('offerName'),
 		offerPhone = document.getElementById('offerPhone');
 
-			if (offerPhone.value !== '' && offerPhone.value !== '') {
+			if (offerName.value !== '' && offerPhone.value !== '') {
 
 				$.ajax({
 					type: "POST",
@@ -153,6 +153,7 @@ $(document).ready(function() {
 						console.log('Прибыли данные: ' + response);
 						$('#offer-form')[0].reset();
 						modalThanks.classList.add('modal_active');
+
 					},
 					error: function(jqXHR, textStatus, errorThrown) {
 						console.error(jqXHR + " " + textStatus);
@@ -180,6 +181,7 @@ $(document).ready(function() {
 					console.log('Прибыли данные: ' + response);
 					$('#the-modal-form')[0].reset();
 					modalThanks.classList.add('modal_active');
+					modalForm.classList.remove('modal_active');
 				},
 				error: function(jqXHR, textStatus, errorThrown) {
 					console.error(jqXHR + " " + textStatus);
@@ -205,7 +207,7 @@ $(document).ready(function() {
 				data: $(this).serialize(),
 				success: function (response) {
 					console.log('Прибыли данные: ' + response);
-					$('#the-modal-form')[0].reset();
+					$('#brif-form')[0].reset();
 					modalThanks.classList.add('modal_active');
 				},
 				error: function(jqXHR, textStatus, errorThrown) {

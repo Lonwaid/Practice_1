@@ -64,6 +64,11 @@
 		&-image
 			&_sizes
 				margin: auto
+		&-list_margin
+			margin-left: 200px
+		&-text__subtitle
+			display: block
+			text-align: center
 
 @media (max-width: 768px)
 	.hero
@@ -82,6 +87,17 @@
 				font-size: 12px
 			&__image
 				margin-right: 15px
+			&_margin
+				margin-left: 130px
+@media (max-width: 567px)
+	.hero
+		&-text
+			&__subtitle
+				display: inline-block
+				text-align: left
+		&-list
+			&_margin
+				margin-left: 0
 @media (max-width: 420px)
 	.hero
 		padding: 23px 0 48px 0
