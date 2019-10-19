@@ -21,6 +21,8 @@
 		box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1)
 		.card__image:before
 			opacity: 1
+		.card__link:after
+			height: 12px
 	&__text
 		padding: 40px
 	&__title
@@ -78,6 +80,13 @@
 	.price
 		&__title
 			font-size: 26px
+	.card
+		&:hover
+			box-shadow: none
+			.card__image:before
+				opacity: 0
+			.card__link:after
+				height: 3px
 @media (max-width: 567px)
 	.price
 		&__title

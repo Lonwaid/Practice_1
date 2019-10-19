@@ -508,7 +508,7 @@
 			<!-- /.container -->
 		</section>
 		<!-- /.section warranty -->
-		<section class="section brif">
+		<section class="section brif reviews">
 
 			<div class="container">
 
@@ -611,7 +611,7 @@
 
 	<footer class="footer">
 
-		<div class="map reviews" id="map">
+		<div class="map" id="map">
 			
 			
 

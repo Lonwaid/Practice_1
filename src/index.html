@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Ремонт квартир</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<!-- <link rel="stylesheet" href="css/normalize.css"> -->
 	<!-- <link rel="stylesheet" href="css/slick.css"> -->
 	<!-- <link rel="stylesheet" href="css/owl.carousel.min.css"> -->
@@ -19,7 +20,7 @@
 
 				<div class="navbar__logo">
 					
-					<img src="img/logo.png" alt="Логотип">
+					<a href="#" class="navbar__link"><img src="img/logo.png" alt="Логотип"></a>
 
 				</div>
 				<!-- /.navbar__logo -->
@@ -139,13 +140,13 @@
 						
 						<div class="input-group input-group__inline">
 
-							<input type="text" name="username" class="input offer__input wow zoomIn" placeholder="Ваше имя">
+							<input type="text" name="username" id="offerName" class="input offer__input wow zoomIn" placeholder="Ваше имя">
 
 						</div>
 
 						<div class="input-group input-group__inline">
 							
-							<input type="tel" name="phone" class="input offer__input input offer__input_sizes wow zoomIn phone" placeholder="Ваш телефон">
+							<input type="tel" name="phone" id="offerPhone" class="input offer__input input offer__input_sizes wow zoomIn phone" placeholder="Ваш телефон">
 
 						</div>
 
@@ -572,23 +573,23 @@
 						<span class="form__subtitle">
 							Для этого заполните форму ниже</span>
 
-							<form action="#" id="brif-form">
+							<form action="mail2.php" id="brif-form">
 								
 								<div class="input-group input-group__brif">
 									
-									<input type="text" name="username" class="input brif__input" placeholder="Ваше имя">
+									<input type="text" name="username" id="brifName" class="input brif__input" placeholder="Ваше имя">
 
 								</div>
 
 								<div class="input-group input-group__brif">
 									
-									<input type="tel" name="phone" class="input brif__input phone" placeholder="Ваш телефон">
+									<input type="tel" name="phone" id="brifPhone" class="input brif__input phone" placeholder="Ваш телефон">
 
 								</div>
 
 								<div class="input-group input-group__brif">
 									
-									<input type="email" name="email" class="input brif__input" placeholder="Ваш email">
+									<input type="email" name="email" id="brifEmail" class="input brif__input" placeholder="Ваш email">
 
 								</div>
 
@@ -612,9 +613,7 @@
 	<footer class="footer">
 
 		<div class="map" id="map">
-			
-			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae8566515bab5baa33009152692c3122625879a333b551a1c6bdbff4df7e8992a&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false"></script>
-
+						
 		</div>
 		<!-- /#map.map -->
 		<div class="container">
@@ -683,7 +682,7 @@
 	</footer>
 	<!-- /.footer section -->
 
-	<div class="modal" id="modal">
+	<div class="modal modal-form" id="modal-form">
 
 		<div class="modal-dialog">
 			
@@ -694,17 +693,17 @@
 			</h4>
 			<span class="modal-dialog__subtitle">
 				Заполните поля ниже - мы свяжемся с&nbsp;Вами</span>
-			<form action="#" class="form offer__form" id="modal-form">
+			<form action="mail1.php" method="POST" id="the-modal-form" class="form offer__form">
 						
 						<div class="input-group__modal">
 							
-							<input type="text" name="username" class="input modal__input" placeholder="Ваше имя">
+							<input type="text" name="username" id="modalName" class="input modal__input" placeholder="Ваше имя">
 
 						</div>
 
 						<div class="input-group__modal">
 							
-							<input type="tel" name="phone" class="input modal__input phone" placeholder="Ваш телефон">
+							<input type="tel" name="phone" id="modalPhone" class="input modal__input phone" placeholder="Ваш телефон">
 
 						</div>
 
@@ -714,6 +713,23 @@
 
 			</form>
 
+			<span class="modal-dialog__text">Или Вы можете перезвонить нам сами по&nbsp;телефону</span>
+
+			<span class="modal-dialog__phone">+7 (8182) 42-51-31</span>
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+
+	<div class="modal modal-thanks" id="modal-thanks">
+
+		<div class="modal-dialog">
+			
+			<button class="modal-dialog__close" id="close-thanks">&times;</button>
+
+			<h4 class="modal-dialog__title">
+				Спасибо за заявку, скоро мы вам перезвоним.
+			</h4>
+						
 			<span class="modal-dialog__text">Или Вы можете перезвонить нам сами по&nbsp;телефону</span>
 
 			<span class="modal-dialog__phone">+7 (8182) 42-51-31</span>

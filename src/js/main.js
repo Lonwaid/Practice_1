@@ -1,20 +1,25 @@
 var button = document.querySelector('#button');
-var modal = document.querySelector('#modal');
+var modalForm = document.querySelector('#modal-form');
+var modalThanks = document.querySelector('#modal-thanks');
 var close = document.querySelector('#close');
+var closeThanks = document.querySelector('#close-thanks');
 
 button.addEventListener('click', function() {
-	modal.classList.add('modal_active');
+	modalForm.classList.add('modal_active');
 	// console.log('');
 });
-button.addEventListener('click', function() {
-	setTimeout(second_passed, 5000);
-});	
+// button.addEventListener('click', function() {
+// 	setTimeout(second_passed, 5000);
+// });	
 close.addEventListener('click', function() {
-	modal.classList.remove('modal_active');
+	modalForm.classList.remove('modal_active');
 });
-function second_passed() {
-	modal.classList.remove('modal_active');
-};
+closeThanks.addEventListener('click', function() {
+	modalThanks.classList.remove('modal_active');
+});
+// function second_passed() {
+// 	modalForm.classList.remove('modal_active');
+// };
 
 new WOW().init();
 $(document).ready(function() {
@@ -85,7 +90,7 @@ $(document).ready(function() {
 		errorClass: "invalid",
 		errorElement: "div",
 	});
-	$('#modal-form').validate({
+	$('#the-modal-form').validate({
 		rules: {
 			username: {
 				required: true,
@@ -121,7 +126,7 @@ $(document).ready(function() {
 	// Маска для телефона
 	$('.phone').mask('+7 (999) 999-99-99');
 
-	var reviews = $('.reviews');
+	var reviews = $('.warranty');
 	var reviewsTop = reviews.offset().top;
 	$(window).bind('scroll', function () {
 		var windowTop = $(this).scrollTop();
@@ -132,27 +137,86 @@ $(document).ready(function() {
 		}
 	});
 
-
-
-
 	$('#offer-form').on('submit', function name(event) {
 		event.preventDefault();
 
-		$.ajax({
-			type: "POST",
-			url: "mail.php",
-			data: $(this).serialize(),
-			success: function (response) {
-				console.log('Прибыли данные: ' + response);
-				$('#offer-form')[0].reset();
-				// modal.classList.add('modal_active');
-				$(".success").text(response);
-			},
-			error: function(jqXHR, textStatus, errorThrown) {
-				console.error(jqXHR + " " + textStatus);
+		const offerName = document.getElementById('offerName'),
+		offerPhone = document.getElementById('offerPhone');
+
+			if (offerPhone.value !== '' && offerPhone.value !== '') {
+
+				$.ajax({
+					type: "POST",
+					url: "mail.php",
+					data: $(this).serialize(),
+					success: function (response) {
+						console.log('Прибыли данные: ' + response);
+						$('#offer-form')[0].reset();
+						modalThanks.classList.add('modal_active');
+					},
+					error: function(jqXHR, textStatus, errorThrown) {
+						console.error(jqXHR + " " + textStatus);
+					},
+				});
+
+			}	else {
+				console.log('Введите данные');
 			}
-		});
-	})
+	});
+
+	$('#the-modal-form').on('submit', function name(event) {
+		event.preventDefault();
+
+		const modalName = document.getElementById('modalName'),
+			modalPhone = document.getElementById('modalPhone');
+
+		if (modalName.value !== '' && modalPhone.value !== '') {
+
+			$.ajax({
+				type: "POST",
+				url: "mail1.php",
+				data: $(this).serialize(),
+				success: function (response) {
+					console.log('Прибыли данные: ' + response);
+					$('#the-modal-form')[0].reset();
+					modalThanks.classList.add('modal_active');
+				},
+				error: function(jqXHR, textStatus, errorThrown) {
+					console.error(jqXHR + " " + textStatus);
+				},
+			});
+
+		}	else {
+			console.log('Введите данные');
+		}
+	});
+	$('#brif-form').on('submit', function name(event) {
+		event.preventDefault();
+
+		const inputName = document.getElementById('brifName'),
+			inputPhone = document.getElementById('brifPhone'),
+			inputEmail = document.getElementById('brifEmail');
+
+		if (inputName.value !== '' && inputPhone.value !== '' && inputEmail.value !== '') {
+
+			$.ajax({
+				type: "POST",
+				url: "mail2.php",
+				data: $(this).serialize(),
+				success: function (response) {
+					console.log('Прибыли данные: ' + response);
+					$('#the-modal-form')[0].reset();
+					modalThanks.classList.add('modal_active');
+				},
+				error: function(jqXHR, textStatus, errorThrown) {
+					console.error(jqXHR + " " + textStatus);
+				},
+			});
+
+		}	else {
+			console.log('Введите данные');
+		}
+	});
 	// слайдер
 	$('.slider').slick({
 		slidesToShow: 3,
